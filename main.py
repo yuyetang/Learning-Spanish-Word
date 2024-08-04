@@ -10,7 +10,7 @@ learn_dict = {}
 try:
     data = pd.read_csv('./data/words_to_learn.csv')
 except FileNotFoundError:
-    original_data = pd.read_csv('./data/spanish_words1000.csv')
+    original_data = pd.read_csv('./data/spanish_words.csv')
     learn_dict = original_data.to_dict(orient='records')
 else:
     learn_dict = data.to_dict(orient='records')
